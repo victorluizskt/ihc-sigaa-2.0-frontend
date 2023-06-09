@@ -18,8 +18,8 @@ const Header = () => (
     <StyledHeader>
         {array.map((item => (
             <StyledHref href={item.redirectTo}>
-                <img src={item.logo} alt="img" style={{ width: "40px", height: "40px" }}/>
-                <h3>{item.field}</h3>
+                <img src={item.logo} alt="img" style={{ width: "30px", height: "30px" }}/>
+                <h4>{item.field}</h4>
             </StyledHref>
         )))}
     </StyledHeader>
