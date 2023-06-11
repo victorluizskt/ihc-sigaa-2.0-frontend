@@ -2,10 +2,9 @@ import styled from 'styled-components';
 
 export const StyledHeader = styled.div`
   display: grid;
-  grid-template-columns: 200px;
+  grid-template-columns: 40px;
   justify-content: flex-start;
-  width: 200px;
-  margin-top: 100px;
+  margin-top: 30px;
   align-items: initial;
 `;
 
