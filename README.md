@@ -41,7 +41,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Deploy
 
-https://stellar-capybara-f3d1f2.netlify.app
+https://sigaa2.netlify.app
 
 ## Learn More
 
