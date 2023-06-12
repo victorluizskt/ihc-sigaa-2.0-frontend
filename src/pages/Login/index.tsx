@@ -11,7 +11,9 @@ export const Login = () => (
             <a href="/home">
                 <Button title="Entrar" action={() => {console.log('oi')}}/>
             </a>
-            <Button title="Esqueceu sua senha?" action={() => {console.log('oi')}}/>
+            <a href="/recoverPassword">
+                <Button title="Esqueceu sua senha?" action={() => {console.log('oi')}}/>
+            </a>
         </StyledLoginContainer>
     </>
 )

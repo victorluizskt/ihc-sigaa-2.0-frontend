@@ -13,5 +13,3 @@ export const Span = styled.span`
   text-align: initial;
   margin-bottom: 5px;
 `;
-
-export default null;
