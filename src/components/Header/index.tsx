@@ -1,19 +1,15 @@
 import { StyledHeader, StyledHref } from './styled';
-import Book from '../../assets/images/book.png';
 import HomePage from '../../assets/images/home-page.png';
-import PassFail from '../../assets/images/pass-fail.png';
-import YearView from '../../assets/images/year-view.png';
+import Grades from '../../assets/images/notebook.png';
 import StudentHeader from '../StudentHeader';
+import Logout from '../../assets/images/logout.png';
 
 // todo: criar uma class
 const array = [
-    {logo: "None", redirectTo: "/home", marginPx: "200px"},
-    {logo: HomePage, redirectTo: "/home"},
-    {logo: YearView, redirectTo: "/frequency"},
-    {logo: PassFail, redirectTo: "/grades"},
-    {logo: Book, redirectTo: "/subjects"},
+    {logo: HomePage, redirecTo: "/home", marginTopVh: "28vh"},
+    { logo: Grades, redirectTo: "/subjects", marginTopVh: "29vh" },
+    { logo: Logout, redirectTo: "/", marginTopVh: "40vh" },
 ];
-
 
 const Header = () => (
     <>
@@ -24,7 +20,12 @@ const Header = () => (
                     <img 
                         src={item.logo} 
                         alt="img" 
-                        style={{ width: "30px", height: "30px", marginBottom: `${item.marginPx ?? "20px"}`, marginLeft: "10px" }}
+                        style={{ 
+                            width: "30px", 
+                            height: "30px", 
+                            marginLeft: "10px",
+                            marginTop: `${item.marginTopVh}`
+                        }}
                     />
                 </StyledHref>
             )))}
