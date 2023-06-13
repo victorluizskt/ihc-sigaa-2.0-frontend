@@ -4,7 +4,7 @@ import Logo from '../../assets/images/logo.png';
 
 const StudentHeader = () => (
     <div style={{marginTop: "10px", display: "flex"}}>
-        <img alt='image' src={Logo} style={{ marginLeft: "12px",width: "25px", height: "25px", marginTop: "20px", marginRight: "10px"}} />
+        <img src={Logo} alt='logo-page' style={{ marginLeft: "12px",width: "25px", height: "25px", marginTop: "20px", marginRight: "10px"}} />
         <img alt='people-icon' src={IconPeople} style={{ width: "25px", height: "25px", marginTop: "20px", marginRight: "10px", marginLeft: "18%"}} />
         <StyledHeaderStudentContainer>
             <Span>Fulado Beltrano da Silva</Span>
