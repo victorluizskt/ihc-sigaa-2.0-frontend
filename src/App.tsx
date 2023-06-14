@@ -3,7 +3,6 @@ import Home from "./pages/Home";
 import Subjects from "./pages/Subjects";
 import Login from "./pages/Login";
 import RecoverPassword from "./pages/RecoverPassword";
-import './App.css';
 
 function App() {
   return (
