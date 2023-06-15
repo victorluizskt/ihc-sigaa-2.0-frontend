@@ -1,12 +1,7 @@
 import { StyledField, Input} from './styled'
 
-interface FieldProps {
-    placeholder: string,
-    title: string,
-    visible?: boolean,
-}
 
-const Field: React.FC<FieldProps> = ({placeholder, title, visible}) => {
+const Field = ({placeholder, title, visible}) => {
     return (
         <StyledField>
             <div style={{
