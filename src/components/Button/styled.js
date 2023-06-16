@@ -14,4 +14,7 @@ export const StyledButton = styled.button`
   font-weight: ${props => props.styleButton ? "": "bold"};
   color: ${props => props.styleButton ? "#5E5BFF": "white"};
   border-radius: 6px;
+  &:hover {
+    cursor: pointer;
+  }
 `;

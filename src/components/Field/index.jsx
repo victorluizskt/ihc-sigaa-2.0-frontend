@@ -1,8 +1,13 @@
 import { 
     StyledField, 
     Input, 
-    SpanField
-} from './styled'
+    SpanField,
+    TooltipCard,
+    TooltipBox,
+    TooltipText,
+} from './styled';
+
+import { FaInfo } from "react-icons/fa";
 
 const Field = ({ title, visible, type }) => {
     return (
@@ -10,10 +15,20 @@ const Field = ({ title, visible, type }) => {
             <div style={{
                 display: "flex",
                 justifyContent: "space-between",
+                width: "210px",
             }}>
                 <SpanField>{title}</SpanField>
                 {visible && (
-                    <SpanField>i</SpanField>
+                     <>
+                        <TooltipCard>
+                            <TooltipText>
+                            <span> <FaInfo /></span>
+                            </TooltipText>
+                            <TooltipBox>
+                                Será enviado um e-mail para o seu endereço cadastrado no Sigaa, contendo instruções para recuperar a senha. Para prosseguir, clique em "Recuperar senha".
+                            </TooltipBox>
+                        </TooltipCard>
+                     </>
                 )}
             </div>
             <Input type={type ? "password" : ""}/>
