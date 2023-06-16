@@ -1,11 +1,14 @@
 import React from 'react';
-import { StyledButtom } from './styled';
+import {
+  ContainerButton,
+  StyledButton,
+} from './styled';
 
-const Button = ({ title, action }) => {
+const Button = ({ title, action, styleButton }) => {
   return (
-    <StyledButtom>
-      <button onClick={action}>{title}</button>
-    </StyledButtom>
+    <ContainerButton styleButton>
+      <StyledButton styleButton={styleButton} onClick={action}>{title}</StyledButton>
+    </ContainerButton>
   );
 };
 

@@ -2,10 +2,13 @@
     margin:0;
     padding:0;
     text-decoration: none;
+    background-color: #F3F3F3;
+    font-family: "Poppins", Arial, sans-serif;
 }
 .container {
     display:flex;
 }
+
 main{
     width: 100%;
     padding: 20px;

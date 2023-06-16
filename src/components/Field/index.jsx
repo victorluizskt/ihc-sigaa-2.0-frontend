@@ -1,19 +1,22 @@
-import { StyledField, Input} from './styled'
+import { 
+    StyledField, 
+    Input, 
+    SpanField
+} from './styled'
 
-
-const Field = ({placeholder, title, visible}) => {
+const Field = ({ title, visible, type }) => {
     return (
         <StyledField>
             <div style={{
                 display: "flex",
                 justifyContent: "space-between",
             }}>
-                <span>{title}</span>
+                <SpanField>{title}</SpanField>
                 {visible && (
-                    <span>i</span>
+                    <SpanField>i</SpanField>
                 )}
             </div>
-            <Input />
+            <Input type={type ? "password" : ""}/>
         </StyledField>
     )
 }

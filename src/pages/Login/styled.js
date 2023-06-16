@@ -7,3 +7,10 @@ export const StyledLoginContainer = styled.div`
   justify-content: space-around;
   margin-top: calc(100vh - 80vh);
 `;
+
+export const Line = styled.hr`
+  border: none;
+  border-top: 1px solid #A39E9E;
+  margin-top: 20px;
+  width: 250px;
+`;
