@@ -3,7 +3,7 @@ import Field from "../../components/Field";
 import { StyledLoginContainer, Line } from './styled';
 
 export const Login = () => (
-    <>
+    <div style={{ backgroundColor: "#F3F3F3" }}>
         <StyledLoginContainer>
             <h1>LOGO</h1>
             <Line /> 
@@ -17,7 +17,7 @@ export const Login = () => (
             </a>
             <Line /> 
         </StyledLoginContainer>
-    </>
+    </div>
 )
 
 export default Login;
