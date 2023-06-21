@@ -1,61 +1,60 @@
 import React from 'react';
-
+import { SidebarWrapper } from './styled'
 import {
     FaHome,
-    FaUserAlt,
-    FaRegChartBar,
-    FaCommentAlt,
-    FaShoppingBag,
-    FaThList
+    FaBookOpen,
 } from "react-icons/fa";
+
+import { IoMdExit } from "react-icons/io";
+
+
 import { NavLink } from 'react-router-dom';
 
 
 const Sidebar = ({children}) => {
-    const menuItem=[
-        {
-            path:"/",
-            name:"Dashboard",
-            icon:<FaHome/>
-        },
-        {
-            path:"/about",
-            name:"About",
-            icon:<FaUserAlt/>
-        },
-        {
-            path:"/analytics",
-            name:"Analytics",
-            icon:<FaRegChartBar/>
-        },
-        {
-            path:"/comment",
-            name:"Comment",
-            icon:<FaCommentAlt/>
-        },
-        {
-            path:"/product",
-            name:"Product",
-            icon:<FaShoppingBag/>
-        },
-        {
-            path:"/productList",
-            name:"Product List",
-            icon:<FaThList/>
-        }
-    ]
+
+    const Logo = {
+        path:"/home",
+        name:"Dashboard",
+        icon:<FaHome/>
+    }
+
+    const Home = {
+        path:"/home",
+        name:"Dashboard",
+        icon:<FaHome/>
+    }
+
+    const Licoes = {
+        path:"/about",
+        name:"About",
+        icon:<FaBookOpen/>
+    }
+
+    const Sair = {
+        path:"/",
+        name:"Exit",
+        icon:<IoMdExit/>
+    }
+
     return (
         <div className="container">
-           <div style={{width: "50px"}} className="sidebar">
-               {
-                   menuItem.map((item, index)=>(
-                       <NavLink to={item.path} key={index} className="link" activeclassName="active">
-                           <div className="icon">{item.icon}</div>
-                           <div style={{display: "none"}} className="link_text">{item.name}</div>
-                       </NavLink>
-                   ))
-               }
-           </div>
+           <SidebarWrapper>
+                <NavLink to={Logo.path} className="link">
+                    <div style={{ marginTop: "50px", marginBottom: "50px"}}>
+                        <div className="icon">{Logo.icon}</div>
+                    </div>
+                </NavLink>
+                <NavLink to={Home.path} className="link" activeclassName="active">
+                    <div className="icon">{Home.icon}</div>
+                </NavLink>
+                <NavLink to={Licoes.path} className="link" activeclassName="active">
+                    <div className="icon">{Licoes.icon}</div>
+                </NavLink>
+                <NavLink to={Sair.path} className="link" activeclassName="active">
+                    <div className="icon">{Sair.icon}</div>
+                </NavLink>
+           </SidebarWrapper>
            <main>{children}</main>
         </div>
     );
