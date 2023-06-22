@@ -32,7 +32,6 @@ const Home = () => (
                 </span>
                 <input 
                     style={{
-                    borderRadius: '22px', 
                     textAlign: 'center', 
                     display: 'flex', 
                     height: '25px',
