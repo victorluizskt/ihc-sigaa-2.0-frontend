@@ -74,7 +74,11 @@ const About = () => {
             </Card>
             { ListDegress.map(disciplina => (
                 <Card height="100px" marginTop="30px">
-
+                    <div style={{ display: 'grid', gridTemplateColumns: '33% 33% 33%'}}>
+                        <div>PARTE 1</div>
+                        <div>PARTE 2</div>
+                        <div>PARTE 3</div>
+                    </div>
                 </Card>
             ))}
         </Sidebar>
