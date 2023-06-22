@@ -6,8 +6,10 @@ import { Card, Line } from "./styled";
 const ListNews = [
     { icon: News, nomeDisciplina: 'IHC', descricao: 'Introdução à Avaliação de IHC e Design da Solução (25/04/2023 - 25/04/2023)'},
     { icon: News, nomeDisciplina: 'IHC', descricao: 'Qualidade em IHC e Abordagens Teóricas (20/04/2023 - 20/04/2023)'},
-    { icon: News, nomeDisciplina: 'IHC', descricao: 'Introdução à Avaliação de IHC e Design da Solução (25/04/2023 - 25/04/2023)'}
-
+    { icon: News, nomeDisciplina: 'IHC', descricao: 'Teste de Usabilidade e Avaliação Heurística (02/05/2023 - 04/05/2023)'},
+    { icon: News, nomeDisciplina: 'IHC', descricao: 'Representação de Usuário e Cenários (18/05/2023 - 23/05/2023)'},
+    { icon: News, nomeDisciplina: 'IHC', descricao: 'Projeto Final (27/06/2023 - 27/06/2023)'},
+    { icon: News, nomeDisciplina: 'IHC', descricao: 'Lanche dos campeoes! (Final do semestre)'}
 ]
 
 const Home = () => (
