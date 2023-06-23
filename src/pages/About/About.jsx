@@ -2,7 +2,8 @@ import React from 'react';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import Navbar from '../../components/Navbar';
 import Calendar from '../../assets/Calendar.png';
-
+import Draw from '../../assets/draw.png';
+import Frequency from '../../assets/frequency.png';
 import { Card } from './styled';
 
 const ListDegress = [
@@ -27,7 +28,6 @@ const ListDegress = [
         horas: '08:40 - 10:20 AM',
         seeMore: '/atividades',
         nota: 'Notas',
-        iconNota: '',
         pontoDistribuido: 'Pontos distribuidos: 60',
         pontuacaoAtual: 'Pontuacao atual: 45',
         seeMoreNotas: '/atividades',
@@ -43,7 +43,6 @@ const ListDegress = [
         horas: '08:40 - 10:20 AM',
         seeMore: '/atividades',
         nota: 'Notas',
-        iconNota: '',
         pontoDistribuido: 'Pontos distribuidos: 60',
         pontuacaoAtual: 'Pontuacao atual: 45',
         seeMoreNotas: '/atividades',
@@ -103,7 +102,7 @@ const About = () => {
                                 {disciplina.nota}
                             </span>
                             <div style={{ display: 'flex', textAlign: 'center', alignItems: 'center'}}>
-                                <img style={{ marginLeft: '2%'}} src={Calendar} alt='calendar' />
+                                <img style={{ marginLeft: '2%'}} src={Draw} alt='calendar' />
                                 <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '2%'}}>{disciplina.pontoDistribuido}</span>
                             </div>
                             <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '9%'}}>{disciplina.pontuacaoAtual}</span>
@@ -119,7 +118,7 @@ const About = () => {
                                 {disciplina.frequencia}
                             </span>
                             <div style={{ display: 'flex', textAlign: 'center', alignItems: 'center'}}>
-                                <img style={{ marginLeft: '2%'}} src={Calendar} alt='calendar' />
+                                <img style={{ marginLeft: '2%'}} src={Frequency} alt='calendar' />
                                 <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '2%'}}>{disciplina.frequenciaRegistrada}</span>
                             </div>
                             <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '9%'}}>{disciplina.frequenciaAtual}</span>
