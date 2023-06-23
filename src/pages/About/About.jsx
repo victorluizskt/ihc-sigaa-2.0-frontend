@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar';
 import Calendar from '../../assets/Calendar.png';
 import Draw from '../../assets/draw.png';
 import Frequency from '../../assets/frequency.png';
-import { Card } from './styled';
+import { Card, TextTitle, TitlePage } from './styled';
 
 const ListDegress = [
     {   nomeDiciplina: 'IHC',
@@ -12,7 +12,6 @@ const ListDegress = [
         horas: '08:40 - 10:20 AM',
         seeMore: '/atividades',
         nota: 'Notas',
-        iconNota: '',
         pontoDistribuido: 'Pontos distribuidos: 60',
         pontuacaoAtual: 'Pontuacao atual: 45',
         seeMoreNotas: '/atividades',
@@ -23,7 +22,6 @@ const ListDegress = [
         seeMoreFrequencia: '/frequencia'
     },
     {   nomeDiciplina: 'IHC',
-        icon: '',
         horario: 'Quarta-feira',
         horas: '08:40 - 10:20 AM',
         seeMore: '/atividades',
@@ -38,7 +36,6 @@ const ListDegress = [
         seeMoreFrequencia: '/frequencia'
     },
     {   nomeDiciplina: 'IHC',
-        icon: '',
         horario: 'Quarta-feira',
         horas: '08:40 - 10:20 AM',
         seeMore: '/atividades',
@@ -60,31 +57,18 @@ const About = () => {
         <Sidebar>
             <Navbar />
             <Card height="148px">
-                <span style={{ 
-                    fontSize: '24px', 
-                    fontWeight: '700', 
-                    textAlign: 'center', 
-                    display: 'flex', 
-                    justifyContent: 'center',
-                    borderRadius: '22px',
-                    paddingTop: '56px'
-                }}>
+                <TitlePage>
                     Disciplinas matriculadas
-                </span>
+                </TitlePage>
             </Card>
-            { ListDegress.map(disciplina => (
+            {ListDegress.map(disciplina => (
                 <Card height="100px" marginTop="30px">
                     <div style={{ display: 'grid', gridTemplateColumns: '1% 33% 33% 33%', height: '100%', borderRadius: '22px'}}>
                         <div style={{ backgroundColor: '#C8E6FA', height: '100%', borderRadius: '20px 0px 0px 20px'}}/>
                         <div style={{ display: 'grid'}}>
-                            <span style={{ 
-                                fontSize: '18px', 
-                                fontWeight: '600', 
-                                marginLeft: '14px',
-                                marginTop: '15px'
-                            }}>
+                            <TextTitle>
                                 {disciplina.nomeDiciplina}
-                            </span>
+                            </TextTitle>
                             <div style={{ display: 'flex', textAlign: 'center', alignItems: 'center'}}>
                                 <img style={{ marginLeft: '2%'}} src={Calendar} alt='calendar' />
                                 <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '2%'}}>{disciplina.horario}</span>
@@ -93,14 +77,9 @@ const About = () => {
                             <span style={{ textAlign: 'end'}}>{disciplina.seeMore}</span>
                         </div>
                         <div style={{ display: 'grid' }}>
-                            <span style={{ 
-                                fontSize: '18px', 
-                                fontWeight: '600', 
-                                marginLeft: '14px',
-                                marginTop: '15px'
-                            }}>
+                            <TextTitle>
                                 {disciplina.nota}
-                            </span>
+                            </TextTitle>
                             <div style={{ display: 'flex', textAlign: 'center', alignItems: 'center'}}>
                                 <img style={{ marginLeft: '2%'}} src={Draw} alt='calendar' />
                                 <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '2%'}}>{disciplina.pontoDistribuido}</span>
@@ -109,14 +88,9 @@ const About = () => {
                             <span style={{ textAlign: 'end'}}>{disciplina.seeMoreNotas}</span>
                         </div>
                         <div style={{ display: 'grid' }}>
-                            <span style={{ 
-                                fontSize: '18px', 
-                                fontWeight: '600', 
-                                marginLeft: '14px',
-                                marginTop: '15px'
-                            }}>
+                            <TextTitle>
                                 {disciplina.frequencia}
-                            </span>
+                            </TextTitle>
                             <div style={{ display: 'flex', textAlign: 'center', alignItems: 'center'}}>
                                 <img style={{ marginLeft: '2%'}} src={Frequency} alt='calendar' />
                                 <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '2%'}}>{disciplina.frequenciaRegistrada}</span>

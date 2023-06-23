@@ -10,3 +10,20 @@ export const Card = styled.div`
     }
     margin-top: ${props => props.marginTop}
 `;
+
+export const TextTitle = styled.span`
+    font-size: 18px;
+    font-weight: 600; 
+    margin-left: 14px;
+    margin-top: 15px;
+`;
+
+export const TitlePage = styled.span`
+    font-size: 24px; 
+    font-weight: 700; 
+    text-align: center; 
+    display: flex; 
+    justify-content: center;
+    border-radius: 22px;
+    padding-top: 56px;
+`;
