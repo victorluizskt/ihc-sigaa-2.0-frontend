@@ -1,11 +1,12 @@
 import React from 'react';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import Navbar from '../../components/Navbar';
+import Calendar from '../../assets/Calendar.png';
+
 import { Card } from './styled';
 
 const ListDegress = [
     {   nomeDiciplina: 'IHC',
-        icon: '',
         horario: 'Quarta-feira',
         horas: '08:40 - 10:20 AM',
         seeMore: '/atividades',
@@ -74,27 +75,55 @@ const About = () => {
             </Card>
             { ListDegress.map(disciplina => (
                 <Card height="100px" marginTop="30px">
-                    <div style={{ display: 'grid', gridTemplateColumns: '33% 33% 33%'}}>
-                        <div>
-                            <span>{disciplina.nomeDiciplina}</span>
-                            <span>{disciplina.icon}</span>
-                            <span>{disciplina.horario}</span>
-                            <span>{disciplina.horas}</span>
-                            <span>{disciplina.seeMore}</span>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1% 33% 33% 33%', height: '100%', borderRadius: '22px'}}>
+                        <div style={{ backgroundColor: '#C8E6FA', height: '100%', borderRadius: '20px 0px 0px 20px'}}/>
+                        <div style={{ display: 'grid'}}>
+                            <span style={{ 
+                                fontSize: '18px', 
+                                fontWeight: '600', 
+                                marginLeft: '14px',
+                                marginTop: '15px'
+                            }}>
+                                {disciplina.nomeDiciplina}
+                            </span>
+                            <div style={{ display: 'flex', textAlign: 'center', alignItems: 'center'}}>
+                                <img style={{ marginLeft: '2%'}} src={Calendar} alt='calendar' />
+                                <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '2%'}}>{disciplina.horario}</span>
+                            </div>
+                            <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '9%'}}>{disciplina.horas}</span>
+                            <span style={{ textAlign: 'end'}}>{disciplina.seeMore}</span>
                         </div>
-                        <div>
-                            <span>{disciplina.nota}</span>
-                            <span>{disciplina.iconNota}</span>
-                            <span>{disciplina.pontoDistribuido}</span>
-                            <span>{disciplina.pontuacaoAtual}</span>
-                            <span>{disciplina.seeMoreNotas}</span>
+                        <div style={{ display: 'grid' }}>
+                            <span style={{ 
+                                fontSize: '18px', 
+                                fontWeight: '600', 
+                                marginLeft: '14px',
+                                marginTop: '15px'
+                            }}>
+                                {disciplina.nota}
+                            </span>
+                            <div style={{ display: 'flex', textAlign: 'center', alignItems: 'center'}}>
+                                <img style={{ marginLeft: '2%'}} src={Calendar} alt='calendar' />
+                                <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '2%'}}>{disciplina.pontoDistribuido}</span>
+                            </div>
+                            <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '9%'}}>{disciplina.pontuacaoAtual}</span>
+                            <span style={{ textAlign: 'end'}}>{disciplina.seeMoreNotas}</span>
                         </div>
-                        <div>
-                            <span>{disciplina.frequencia}</span>
-                            <span>{disciplina.iconFrequencia}</span>
-                            <span>{disciplina.frequenciaRegistrada}</span>
-                            <span>{disciplina.frequenciaAtual}</span>
-                            <span>{disciplina.seeMoreFrequencia}</span>
+                        <div style={{ display: 'grid' }}>
+                            <span style={{ 
+                                fontSize: '18px', 
+                                fontWeight: '600', 
+                                marginLeft: '14px',
+                                marginTop: '15px'
+                            }}>
+                                {disciplina.frequencia}
+                            </span>
+                            <div style={{ display: 'flex', textAlign: 'center', alignItems: 'center'}}>
+                                <img style={{ marginLeft: '2%'}} src={Calendar} alt='calendar' />
+                                <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '2%'}}>{disciplina.frequenciaRegistrada}</span>
+                            </div>
+                            <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '9%'}}>{disciplina.frequenciaAtual}</span>
+                            <span style={{ textAlign: 'end'}}>{disciplina.seeMoreFrequencia}</span>
                         </div>
                     </div>
                 </Card>
