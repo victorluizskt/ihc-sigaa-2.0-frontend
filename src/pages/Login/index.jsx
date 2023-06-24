@@ -22,8 +22,6 @@ export const Login = () => {
         }
     }
 
-    console.log(user);
-
     return (
         <div style={{ backgroundColor: "#F3F3F3" }}>
             <StyledLoginContainer>
@@ -35,7 +33,7 @@ export const Login = () => {
                     <Button title="Entrar" action={handleLogin}/>
                 </a>
                 <a href="/recoverPassword">
-                    <Button styleButton="76px" title="Esqueceu sua senha?" action={() => {console.log('oi')}}/>
+                    <Button styleButton="76px" title="Esqueceu sua senha?" />
                 </a>
                 <Line /> 
             </StyledLoginContainer>

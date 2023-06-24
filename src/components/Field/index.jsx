@@ -11,7 +11,6 @@ import { FaInfo } from "react-icons/fa";
 
 const Field = ({ title, visible, type, setUser, user}) => {
     const saveData = (e) => {
-        console.log(e.target.value);
         if (type === "password") {
             setUser(prevState => ({
               ...prevState,
