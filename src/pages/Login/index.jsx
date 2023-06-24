@@ -19,6 +19,8 @@ export const Login = () => {
             const userJSON = JSON.stringify(success);
             localStorage.setItem('user', userJSON);
             navigate('/home')
+        } else {
+             alert('Login ou senha incorretos.')
         }
     }
 
