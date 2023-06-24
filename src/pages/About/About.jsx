@@ -4,50 +4,53 @@ import Navbar from '../../components/Navbar';
 import Calendar from '../../assets/Calendar.png';
 import Draw from '../../assets/draw.png';
 import Frequency from '../../assets/frequency.png';
-import { Card, TextTitle, TitlePage } from './styled';
+import { Card, TextTitle, TitlePage, Button} from './styled';
 
 const ListDegress = [
     {   nomeDiciplina: 'IHC',
         horario: 'Quarta-feira',
         horas: '08:40 - 10:20 AM',
-        seeMore: '/atividades',
         nota: 'Notas',
         pontoDistribuido: 'Pontos distribuidos: 60',
         pontuacaoAtual: 'Pontuacao atual: 45',
+        seeMoreFrequency: '/frequencia',
         seeMoreNotas: '/atividades',
+        seeMoreAboutDegree: '/disciplina',
         frequencia: 'Frequencia',
         iconFrequencia: '',
         frequenciaRegistrada: 'Frequencia registrada: 12/30',
         frequenciaAtual: 'Frequencia atual: 2/30',
-        seeMoreFrequencia: '/frequencia'
+        seeMore: 'Ver mais'
     },
     {   nomeDiciplina: 'IHC',
         horario: 'Quarta-feira',
         horas: '08:40 - 10:20 AM',
-        seeMore: '/atividades',
         nota: 'Notas',
         pontoDistribuido: 'Pontos distribuidos: 60',
         pontuacaoAtual: 'Pontuacao atual: 45',
+        seeMoreFrequency: '/frequencia',
         seeMoreNotas: '/atividades',
+        seeMoreAboutDegree: '/disciplina',
         frequencia: 'Frequencia',
         iconFrequencia: '',
         frequenciaRegistrada: 'Frequencia registrada: 12/30',
         frequenciaAtual: 'Frequencia atual: 2/30',
-        seeMoreFrequencia: '/frequencia'
+        seeMore: 'Ver mais'
     },
     {   nomeDiciplina: 'IHC',
         horario: 'Quarta-feira',
         horas: '08:40 - 10:20 AM',
-        seeMore: '/atividades',
         nota: 'Notas',
         pontoDistribuido: 'Pontos distribuidos: 60',
         pontuacaoAtual: 'Pontuacao atual: 45',
+        seeMoreFrequency: '/frequencia',
         seeMoreNotas: '/atividades',
+        seeMoreAboutDegree: '/disciplina',
         frequencia: 'Frequencia',
         iconFrequencia: '',
         frequenciaRegistrada: 'Frequencia registrada: 12/30',
         frequenciaAtual: 'Frequencia atual: 2/30',
-        seeMoreFrequencia: '/frequencia'
+        seeMore: 'Ver mais'
     },
 ];
 
@@ -74,7 +77,9 @@ const About = () => {
                                 <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '2%'}}>{disciplina.horario}</span>
                             </div>
                             <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '9%'}}>{disciplina.horas}</span>
-                            <span style={{ textAlign: 'end'}}>{disciplina.seeMore}</span>
+                            <a href={disciplina.seeMoreAboutDegree} style={{ textAlign: 'end'}} >
+                                <Button>{disciplina.seeMore}</Button>
+                            </a>
                         </div>
                         <div style={{ display: 'grid' }}>
                             <TextTitle>
@@ -85,9 +90,11 @@ const About = () => {
                                 <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '2%'}}>{disciplina.pontoDistribuido}</span>
                             </div>
                             <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '9%'}}>{disciplina.pontuacaoAtual}</span>
-                            <span style={{ textAlign: 'end'}}>{disciplina.seeMoreNotas}</span>
+                            <a href={disciplina.seeMoreNotas} style={{ textAlign: 'end'}} >
+                                <Button>{disciplina.seeMore}</Button>
+                            </a>
                         </div>
-                        <div style={{ display: 'grid' }}>
+                        <div style={{ display: 'grid', borderRadius: '22px' }}>
                             <TextTitle>
                                 {disciplina.frequencia}
                             </TextTitle>
@@ -96,7 +103,9 @@ const About = () => {
                                 <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '2%'}}>{disciplina.frequenciaRegistrada}</span>
                             </div>
                             <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '9%'}}>{disciplina.frequenciaAtual}</span>
-                            <span style={{ textAlign: 'end'}}>{disciplina.seeMoreFrequencia}</span>
+                            <a href={disciplina.seeMoreFrequency} style={{ textAlign: 'end', borderRadius: '22px'}} >
+                                <Button>{disciplina.seeMore}</Button>
+                            </a>
                         </div>
                     </div>
                 </Card>

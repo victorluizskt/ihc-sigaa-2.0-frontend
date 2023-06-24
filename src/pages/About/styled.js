@@ -27,3 +27,12 @@ export const TitlePage = styled.span`
     border-radius: 22px;
     padding-top: 56px;
 `;
+
+export const Button = styled.button`
+    border: none;
+    color: #8E9FFB;
+    text-decoration-line: underline;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+`;
