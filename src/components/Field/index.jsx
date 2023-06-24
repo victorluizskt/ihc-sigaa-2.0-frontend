@@ -9,7 +9,24 @@ import {
 
 import { FaInfo } from "react-icons/fa";
 
-const Field = ({ title, visible, type }) => {
+const Field = ({ title, visible, type, setUser, user}) => {
+    const saveData = (e) => {
+        console.log(e.target.value);
+        if (type === "password") {
+            setUser(prevState => ({
+              ...prevState,
+              password: e.target.value
+            }));
+        } else {
+        setUser(prevState => ({
+            ...prevState,
+            cpf: e.target.value
+            }));
+        }
+          
+          
+    }
+
     return (
         <StyledField>
             <div style={{
@@ -31,7 +48,7 @@ const Field = ({ title, visible, type }) => {
                      </>
                 )}
             </div>
-            <Input type={type ? "password" : ""}/>
+            <Input onChange={e => saveData(e)} type={type ? "password" : ""}/>
         </StyledField>
     )
 }
