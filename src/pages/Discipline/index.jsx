@@ -1,7 +1,12 @@
 import Navbar from "../../components/Navbar";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import DisciplineHeader from "../../components/DisciplineHeader";
-import { Card, Line } from './styled';
+import { 
+    Card, 
+    Line, 
+    TitlePage, 
+    Button ,
+} from './styled';
 
 const Discipline = () => {
     return (
@@ -9,8 +14,12 @@ const Discipline = () => {
             <Navbar />
             <DisciplineHeader />
             <Card height="418px" marginTop="30px">
-                <span>Voltar</span>
-                <span>Atividades</span>
+                <div style={{ display: 'grid', gridTemplateColumns: '45% 50%', paddingTop: '20px', marginLeft: '30px'}}>
+                    <a href="/about">
+                        <Button>Voltar</Button>
+                    </a>
+                    <TitlePage>Atividades</TitlePage>
+                </div>
                 <Line />
                 <span>Prova 1</span>
                 <span>Valor</span>
