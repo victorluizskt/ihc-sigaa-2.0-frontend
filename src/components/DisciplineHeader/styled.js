@@ -27,3 +27,16 @@ export const Fields = styled.span`
     font-size: 14px;
     margin-left: 5px;
 `;
+
+export const DisciplineContainer = styled.div`
+    display: grid;
+    grid-template-rows: 65% 65%;
+    margin-left: 30px; 
+    margin-top: 10px;
+`;
+
+export const Image = styled.img`
+    margin-bottom: -4px;
+    width: 20px;
+    height: 20px; 
+`;
