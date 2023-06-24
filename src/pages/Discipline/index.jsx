@@ -45,7 +45,7 @@ const Discipline = () => {
                         <span style={{ fontSize: '15px' }}>Prova 2</span>
                         <span style={{ fontSize: '10px' }}>Valor: 25 pontos</span>
                     </div>
-                    <span style={{ textAlign: 'end', fontSize: '10px', paddingTop: '14px' }}>Data limite: 10-04-2023 23:59</span>
+                    <span style={{ textAlign: 'end', fontSize: '10px', paddingTop: '14px' }}>Data limite: 30-06-2023 23:59</span>
                     <div style={{ paddingTop: '7px', display: 'flex', flexDirection: 'row-reverse'}}>
                         <ButtonSend background="#5E5BFF;">Enviar</ButtonSend>
                     </div>
@@ -57,7 +57,7 @@ const Discipline = () => {
                         <span style={{ fontSize: '15px' }}>Trabalho em grupo</span>
                         <span style={{ fontSize: '10px', marginLeft: '2px' }}>Valor: 40 pontos</span>
                     </div>
-                    <span style={{ textAlign: 'end', fontSize: '10px', paddingTop: '14px' }}>Data limite: 10-04-2023 23:59</span>
+                    <span style={{ textAlign: 'end', fontSize: '10px', paddingTop: '14px' }}>Data limite: 01-07-2023 23:59</span>
                     <div style={{ paddingTop: '7px', display: 'flex', flexDirection: 'row-reverse'}}>
                         <ButtonSend background="#5E5BFF;">Enviar</ButtonSend>
                     </div>
@@ -69,7 +69,7 @@ const Discipline = () => {
                         <span style={{ fontSize: '15px' }}>Listas</span>
                         <span style={{ fontSize: '10px' }}>Valor: 10 pontos</span>
                     </div>
-                    <span style={{ textAlign: 'end', fontSize: '10px', paddingTop: '14px' }}>Data limite: 10-04-2023 23:59</span>
+                    <span style={{ textAlign: 'end', fontSize: '10px', paddingTop: '14px' }}>Data limite: 07-07-2023 23:59</span>
                     <div style={{ paddingTop: '7px', display: 'flex', flexDirection: 'row-reverse'}}>
                         <ButtonSend background="#5E5BFF;">Enviar</ButtonSend>
                     </div>

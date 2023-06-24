@@ -1,4 +1,6 @@
 import React from 'react';
+import { useContext } from "react";
+import { DisciplineContext } from "../../context/disciplineContext";
 import Sidebar from '../../components/Sidebar/Sidebar';
 import Navbar from '../../components/Navbar';
 import Calendar from '../../assets/Calendar.png';
@@ -57,6 +59,13 @@ const ListDegress = [
 
 
 const About = () => {
+
+    const {value, updateValue} = useContext(DisciplineContext);
+
+    const changeValueContext = () => {
+
+    }
+
     const calculateFrequency = (frequency) => {
         const calculte = frequency.split("/");
         console.log(calculte);

@@ -13,7 +13,6 @@ import {
     TitlePage, 
     Button,
     Image,
-    ButtonSend
 } from './styled';
 
 const Grades = () => {

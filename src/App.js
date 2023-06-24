@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { DisciplineContextProvider } from './context/disciplineContext';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import RecoverPassword from './pages/RecoverPassword';
@@ -8,10 +8,12 @@ import About from './pages/About/About';
 import Discipline from './pages/Discipline';
 import Grades from './pages/Grades';
 import Frequency from './pages/Frequency';
+import './App.css';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <DisciplineContextProvider>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
@@ -21,7 +23,8 @@ const App = () => {
           <Route path='/atividades' element= { <Grades /> } />
           <Route path='/frequencia' element= { <Frequency /> } />
         </Routes>
-    </BrowserRouter>
+      </BrowserRouter>
+    </DisciplineContextProvider>
   );
 };
 
