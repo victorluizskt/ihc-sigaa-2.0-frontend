@@ -31,9 +31,7 @@ export const Login = () => {
                 <Line /> 
                 <Field title="Usuario:" setUser={setUser} user={user}/>
                 <Field title="Senha:" type="password" setUser={setUser} user={user}/>
-                <a>
-                    <Button title="Entrar" action={handleLogin}/>
-                </a>
+                <Button title="Entrar" action={handleLogin}/>
                 <a href="/recoverPassword">
                     <Button styleButton="76px" title="Esqueceu sua senha?" />
                 </a>

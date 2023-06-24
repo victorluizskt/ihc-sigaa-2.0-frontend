@@ -73,7 +73,7 @@ const ListDegress = [
 
 const About = () => {
     const navigate = useNavigate();
-    const {value, updateValue} = useContext(DisciplineContext);
+    const {updateValue} = useContext(DisciplineContext);
 
     const changeValueContext = (discipline, redirect) => {
         updateValue(discipline);
