@@ -14,7 +14,7 @@ import {
     ButtonSend
 } from './styled';
 
-const Discipline = () => {
+const Discipline = () => {    
     return (
         <Sidebar>
             <Navbar />

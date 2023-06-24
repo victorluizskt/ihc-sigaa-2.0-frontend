@@ -8,10 +8,15 @@ import {
 } from './styled'
 import Calendar from '../../assets/Calendar.png';
 import Clock from '../../assets/clock.png';
+import { useContext } from "react";
+import { DisciplineContext } from "../../context/disciplineContext";
 
-const DisciplineHeader = () => (
-    <Card height="148px" marginTop="20px">
-        <TitlePage> IHC </TitlePage>
+const DisciplineHeader = () =>  {
+    const { value } = useContext(DisciplineContext);
+
+    return (
+        <Card height="148px" marginTop="20px">
+        <TitlePage> {value.nomeDiciplina} </TitlePage>
         <DisciplineContainer>
             <div>
                 <Image src={Calendar} alt='calendar-discipline'/>
@@ -23,6 +28,7 @@ const DisciplineHeader = () => (
             </div>
         </DisciplineContainer>
     </Card>
-);
+    )
+};
 
 export default DisciplineHeader;

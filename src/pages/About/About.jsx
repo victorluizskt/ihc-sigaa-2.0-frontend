@@ -5,6 +5,7 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 import Navbar from '../../components/Navbar';
 import Calendar from '../../assets/Calendar.png';
 import Draw from '../../assets/draw.png';
+import { useNavigate } from 'react-router-dom';
 import Frequency from '../../assets/frequency.png';
 import CEFET from '../../assets/cefet.png';
 import { Card, TextTitle, TitlePage, Button} from './styled';
@@ -59,16 +60,16 @@ const ListDegress = [
 
 
 const About = () => {
-
+    const navigate = useNavigate();
     const {value, updateValue} = useContext(DisciplineContext);
 
-    const changeValueContext = () => {
-
+    const changeValueContext = (discipline, redirect) => {
+        updateValue(discipline);
+        navigate(`${redirect}`)
     }
 
     const calculateFrequency = (frequency) => {
         const calculte = frequency.split("/");
-        console.log(calculte);
         const percentage = (calculte[0] / calculte[1]) * 100;
         if(percentage >= 75) return "#00b327";
         return '#F00';
@@ -77,7 +78,6 @@ const About = () => {
     const calculateNotas = (nota1, nota2) => {
         const nota2Split = nota2.split(": ")[1];
         const percentage = (nota1 / nota2Split) * 100;
-        console.log(nota2Split);
         if(percentage >= 60) return "#00b327";
         return '#F00';
     };
@@ -103,9 +103,9 @@ const About = () => {
                                 <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '2%'}}>{disciplina.horario}</span>
                             </div>
                             <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '9%'}}>{disciplina.horas}</span>
-                            <a href={disciplina.seeMoreAboutDegree} style={{ textAlign: 'end'}} >
-                                <Button>{disciplina.seeMore}</Button>
-                            </a>
+                            <span style={{ textAlign: 'end'}}>
+                                <Button onClick={() => changeValueContext(disciplina, disciplina.seeMoreAboutDegree)}>{disciplina.seeMore}</Button>
+                            </span>
                         </div>
                         <div style={{ display: 'grid' }}>
                             <TextTitle>
@@ -119,9 +119,9 @@ const About = () => {
                                 <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '9%'}}>Pontuacao atual: </span>
                                 <span style={{ color: `${calculateNotas(disciplina.pontuacaoAtual, disciplina.pontoDistribuido)}`, fontSize: '14px', marginLeft: '1%'}}>{disciplina.pontuacaoAtual}</span>
                             </div>
-                            <a href={disciplina.seeMoreNotas} style={{ textAlign: 'end'}} >
-                                <Button>{disciplina.seeMore}</Button>
-                            </a>
+                            <span style={{ textAlign: 'end'}}>
+                                <Button onClick={() => changeValueContext(disciplina, disciplina.seeMoreNotas)}>{disciplina.seeMore}</Button>
+                            </span>
                         </div>
                         <div style={{ display: 'grid', borderRadius: '22px' }}>
                             <TextTitle>
@@ -135,9 +135,9 @@ const About = () => {
                                 <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '9%'}}>Frequencia atual: </span>
                                 <span style={{ color: `${calculateFrequency(disciplina.frequenciaAtual)}`, fontSize: '14px', marginLeft: '1%'}}>{disciplina.frequenciaAtual}</span>
                             </div>
-                            <a href={disciplina.seeMoreFrequency} style={{ textAlign: 'end', borderRadius: '0px 0px 11px'}} >
-                                <Button>{disciplina.seeMore}</Button>
-                            </a>
+                            <span style={{ textAlign: 'end', borderRadius: '0px 0px 11px'}} >
+                                <Button onClick={() => changeValueContext(disciplina, disciplina.seeMoreFrequency)}>{disciplina.seeMore}</Button>
+                            </span>
                         </div>
                     </div>
                 </Card>
