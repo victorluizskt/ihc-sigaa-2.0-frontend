@@ -103,7 +103,7 @@ const About = () => {
                                 <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '2%'}}>{disciplina.frequenciaRegistrada}</span>
                             </div>
                             <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '9%'}}>{disciplina.frequenciaAtual}</span>
-                            <a href={disciplina.seeMoreFrequency} style={{ textAlign: 'end', borderRadius: '22px'}} >
+                            <a href={disciplina.seeMoreFrequency} style={{ textAlign: 'end', borderRadius: '0px 0px 11px'}} >
                                 <Button>{disciplina.seeMore}</Button>
                             </a>
                         </div>
