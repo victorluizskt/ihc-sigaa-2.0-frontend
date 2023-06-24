@@ -94,9 +94,9 @@ const About = () => {
                                 <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '2%'}}>{disciplina.horario}</span>
                             </div>
                             <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '9%'}}>{disciplina.horas}</span>
-                            <span style={{ textAlign: 'end' }}>
+                            <a href={disciplina.seeMoreAboutDegree} style={{ textAlign: 'end'}} >
                                 <Button>{disciplina.seeMore}</Button>
-                            </span>
+                            </a>
                         </div>
                         <div style={{ display: 'grid' }}>
                             <TextTitle>
@@ -110,9 +110,9 @@ const About = () => {
                                 <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '9%'}}>Pontuacao atual: </span>
                                 <span style={{ color: `${calculateNotas(disciplina.pontuacaoAtual, disciplina.pontoDistribuido)}`, fontSize: '14px', marginLeft: '1%'}}>{disciplina.pontuacaoAtual}</span>
                             </div>
-                            <span style={{ textAlign: 'end' }}>
+                            <a href={disciplina.seeMoreNotas} style={{ textAlign: 'end'}} >
                                 <Button>{disciplina.seeMore}</Button>
-                            </span>
+                            </a>
                         </div>
                         <div style={{ display: 'grid', borderRadius: '22px' }}>
                             <TextTitle>
@@ -126,9 +126,9 @@ const About = () => {
                                 <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '9%'}}>Frequencia atual: </span>
                                 <span style={{ color: `${calculateFrequency(disciplina.frequenciaAtual)}`, fontSize: '14px', marginLeft: '1%'}}>{disciplina.frequenciaAtual}</span>
                             </div>
-                            <span style={{ textAlign: 'end', borderRadius: '0px 0px 11px' }}>
+                            <a href={disciplina.seeMoreFrequency} style={{ textAlign: 'end', borderRadius: '0px 0px 11px'}} >
                                 <Button>{disciplina.seeMore}</Button>
-                            </span>
+                            </a>
                         </div>
                     </div>
                 </Card>
