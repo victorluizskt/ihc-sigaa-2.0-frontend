@@ -16,6 +16,10 @@ const ListDegress = [
         horas: '13:00 - 14:40 AM',
         nota: 'Notas',
         pontoDistribuido: 'Pontos distribuidos: 80',
+        nota1: 10,
+        nota2: 20,
+        nota3: 20,
+        nota4: 10,
         pontuacaoAtual: '60',
         seeMoreFrequency: '/frequencia',
         seeMoreNotas: '/atividades',
@@ -39,6 +43,10 @@ const ListDegress = [
         iconFrequencia: '',
         frequenciaRegistrada: 'Frequencia registrada: 26/30',
         frequenciaAtual: '24/30',
+        nota1: 25,
+        nota2: 25,
+        nota3: 40,
+        nota4: 9,
         seeMore: 'Ver mais'
     },
     {   nomeDiciplina: 'Psicologia Aplicada às Organizações',
@@ -54,7 +62,11 @@ const ListDegress = [
         iconFrequencia: '',
         frequenciaRegistrada: 'Frequencia registrada: 30/30',
         frequenciaAtual: '2/30',
-        seeMore: 'Ver mais'
+        seeMore: 'Ver mais',
+        nota1: 25,
+        nota2: 25,
+        nota3: 0,
+        nota4: 5,
     },
 ];
 
