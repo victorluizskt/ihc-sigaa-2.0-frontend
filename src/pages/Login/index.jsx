@@ -1,11 +1,13 @@
 import Button from "../../components/Button";
 import Field from "../../components/Field";
+import Logo from "../../assets/logo-notfound.png";
+
 import { StyledLoginContainer, Line } from './styled';
 
 export const Login = () => (
     <div style={{ backgroundColor: "#F3F3F3" }}>
         <StyledLoginContainer>
-            <h1>LOGO</h1>
+            <img style={{ marginLeft: '118px' }} src={Logo} alt="logo-marca" />
             <Line /> 
             <Field title="Usuario:"/>
             <Field title="Senha:" type="password"/>
