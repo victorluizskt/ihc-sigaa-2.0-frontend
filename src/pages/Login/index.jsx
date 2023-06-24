@@ -16,7 +16,7 @@ export const Login = () => {
     const handleLogin = () => {
         let success = mockUsers.filter(item => item.cpf == user.cpf && item.password == user.password);
         if(success.length > 0) {
-            const userJSON = JSON.stringify(user);
+            const userJSON = JSON.stringify(success);
             localStorage.setItem('user', userJSON);
             navigate('/home')
         }
