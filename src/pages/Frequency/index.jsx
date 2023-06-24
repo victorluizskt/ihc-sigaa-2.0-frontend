@@ -16,86 +16,90 @@ const FrequencyList = [
     {
         icon: '',
         date: '11-03-2023',
+        present:'Presente',
+    },
+    {
+        icon: '',
+        date: '13-03-2023',
         present:'Falta',
     },
     {
         icon: '',
-        date: '11-03-2023',
+        date: '18-03-2023',
+        present:'Presente',
+    },
+    {
+        icon: '',
+        date: '20-03-2023',
+        present:'Presente',
+    },
+    {
+        icon: '',
+        date: '21-04-2023',
+        present:'Presente',
+    },
+    {
+        icon: '',
+        date: '22-04-2023',
         present:'Falta',
     },
     {
         icon: '',
-        date: '11-03-2023',
+        date: '01-05-2023',
+        present:'Presente',
+    },
+    {
+        icon: '',
+        date: '10-05-2023',
         present:'Falta',
     },
     {
         icon: '',
-        date: '11-03-2023',
+        date: '20-05-2023',
+        present:'Presente',
+    },
+    {
+        icon: '',
+        date: '25-05-2023',
         present:'Falta',
     },
     {
         icon: '',
-        date: '11-03-2023',
+        date: '01-06-2023',
+        present:'Presente',
+    },
+    {
+        icon: '',
+        date: '10-06-2023',
+        present:'Presente',
+    },
+    {
+        icon: '',
+        date: '15-06-2023',
         present:'Falta',
     },
     {
         icon: '',
-        date: '11-03-2023',
-        present:'Falta',
+        date: '20-06-2023',
+        present:'Presente',
     },
     {
         icon: '',
-        date: '11-03-2023',
-        present:'Falta',
+        date: '01-07-2023',
+        present:'Presente',
     },
     {
         icon: '',
-        date: '11-03-2023',
-        present:'Falta',
-    },
-    {
-        icon: '',
-        date: '11-03-2023',
-        present:'Falta',
-    },
-    {
-        icon: '',
-        date: '11-03-2023',
-        present:'Falta',
-    },
-    {
-        icon: '',
-        date: '11-03-2023',
-        present:'Falta',
-    },
-    {
-        icon: '',
-        date: '11-03-2023',
-        present:'Falta',
-    },
-    {
-        icon: '',
-        date: '11-03-2023',
-        present:'Falta',
-    },
-    {
-        icon: '',
-        date: '11-03-2023',
-        present:'Falta',
-    },
-    {
-        icon: '',
-        date: '11-03-2023',
-        present:'Falta',
-    },
-    {
-        icon: '',
-        date: '11-03-2023',
+        date: '07-07-2023',
         present:'Falta',
     },
 ];
 
 const Frequency = () => {
+    const calculateFrequency = (present) => {
+        return present === "Presente" ? "#00b327" : '#F00';
+    };
+
     return (
         <Sidebar>
             <Navbar />
@@ -114,7 +118,7 @@ const Frequency = () => {
                             <img  src={Task} alt="icon"/>
                             <div style={{ display: 'grid', marginLeft: '30px' }}>
                                 <span style={{ fontSize: '15px' }}>{frequency.date}</span>
-                                <span style={{ fontSize: '10px'}}>{frequency.present}</span>
+                                <span style={{ fontSize: '10px', color: `${calculateFrequency(frequency.present)}`}}>{frequency.present}</span>
                             </div>
                             <Line marginLeft="0px"/>
                         </div>
