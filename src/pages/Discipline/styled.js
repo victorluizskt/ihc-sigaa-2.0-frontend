@@ -37,3 +37,23 @@ export const Button = styled.button`
     margin-right: 10px;
     padding-top: 8px;
 `;
+
+export const Image = styled.img`
+    margin-bottom: -4px;
+    width: 25px;
+    height: 25px; 
+    margin-left: 30px;
+`;
+
+export const ButtonSend = styled.button`
+    border-radius: 6px;
+    background: ${props => props.background ? props.background : "#A8A8A8"};
+    width: 51px;
+    height: 19px;
+    flex-shrink: 0;
+    border: none;
+    color: #FFF;
+    text-align: center;
+    font-size: 8px;
+    font-weight: 700;
+`;
