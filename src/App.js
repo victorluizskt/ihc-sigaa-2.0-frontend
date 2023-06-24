@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import RecoverPassword from './pages/RecoverPassword';
 import About from './pages/About/About';
 import Discipline from './pages/Discipline';
+import Grades from './pages/Grades';
+import Frequency from './pages/Frequency';
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
           <Route path="/recoverPassword" element={<RecoverPassword />} />
           <Route path='/about' element={ <About /> } />
           <Route path='/disciplina' element= { <Discipline /> } />
+          <Route path='/atividades' element= { <Grades /> } />
+          <Route path='/frequencia' element= { <Frequency /> } />
         </Routes>
     </BrowserRouter>
   );
