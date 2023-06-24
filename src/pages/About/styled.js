@@ -35,4 +35,5 @@ export const Button = styled.button`
     cursor: pointer;
     margin-bottom: 10px;
     margin-right: 10px;
+    margin-left: 50px;
 `;
