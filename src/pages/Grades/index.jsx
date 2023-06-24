@@ -5,6 +5,7 @@ import Task from '../../assets/task.png';
 import Group from '../../assets/group.png';
 import List from '../../assets/list.png';
 import Total from '../../assets/total.png';
+import CEFET from '../../assets/cefet.png';
 
 import { 
     Card, 
@@ -73,6 +74,10 @@ const Grades = () => {
                 <span style={{ textAlign: 'end', fontSize: '10px', paddingTop: '14px' }}>Nota: 68</span>
             </div>
         </Card>
+        <div style={{ display: 'grid', marginTop: '30px', justifyContent: 'center'}}>
+            <img style={{ marginLeft: '144px' }} src={CEFET} alt="cefet-mg" />
+            <span style={{ textAlign: 'center'}}>SIGAA | Diretoria de Tecnologia da Informação</span>
+        </div>
     </Sidebar>
     )
 }

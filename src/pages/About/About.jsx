@@ -4,6 +4,7 @@ import Navbar from '../../components/Navbar';
 import Calendar from '../../assets/Calendar.png';
 import Draw from '../../assets/draw.png';
 import Frequency from '../../assets/frequency.png';
+import CEFET from '../../assets/cefet.png';
 import { Card, TextTitle, TitlePage, Button} from './styled';
 
 const ListDegress = [
@@ -110,6 +111,10 @@ const About = () => {
                     </div>
                 </Card>
             ))}
+            <div style={{ display: 'grid', marginTop: '30px', justifyContent: 'center'}}>
+                <img style={{ marginLeft: '144px' }} src={CEFET} alt="cefet-mg" />
+                <span style={{ textAlign: 'center'}}>SIGAA | Diretoria de Tecnologia da Informação</span>
+            </div>
         </Sidebar>
     );
 };

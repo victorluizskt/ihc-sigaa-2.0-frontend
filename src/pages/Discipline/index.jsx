@@ -4,6 +4,7 @@ import DisciplineHeader from "../../components/DisciplineHeader";
 import Task from '../../assets/task.png';
 import Group from '../../assets/group.png';
 import List from '../../assets/list.png';
+import CEFET from '../../assets/cefet.png';
 import { 
     Card, 
     Line, 
@@ -75,6 +76,10 @@ const Discipline = () => {
                 </div>
                 <Line />
             </Card>
+            <div style={{ display: 'grid', marginTop: '30px', justifyContent: 'center'}}>
+                <img style={{ marginLeft: '144px' }} src={CEFET} alt="cefet-mg" />
+                <span style={{ textAlign: 'center'}}>SIGAA | Diretoria de Tecnologia da Informação</span>
+            </div>
         </Sidebar>
     )
 }
