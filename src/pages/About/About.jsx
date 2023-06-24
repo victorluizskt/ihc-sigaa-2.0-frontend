@@ -8,55 +8,71 @@ import CEFET from '../../assets/cefet.png';
 import { Card, TextTitle, TitlePage, Button} from './styled';
 
 const ListDegress = [
-    {   nomeDiciplina: 'IHC',
-        horario: 'Quarta-feira',
-        horas: '08:40 - 10:20 AM',
+    {   nomeDiciplina: 'Inteligencia Computacional I',
+        horario: 'Quinta-feira',
+        horas: '13:00 - 14:40 AM',
         nota: 'Notas',
-        pontoDistribuido: 'Pontos distribuidos: 60',
-        pontuacaoAtual: 'Pontuacao atual: 45',
+        pontoDistribuido: 'Pontos distribuidos: 80',
+        pontuacaoAtual: '60',
         seeMoreFrequency: '/frequencia',
         seeMoreNotas: '/atividades',
         seeMoreAboutDegree: '/disciplina',
         frequencia: 'Frequencia',
         iconFrequencia: '',
-        frequenciaRegistrada: 'Frequencia registrada: 12/30',
-        frequenciaAtual: 'Frequencia atual: 2/30',
+        frequenciaRegistrada: 'Frequencia registrada: 24/30',
+        frequenciaAtual: '15/30',
         seeMore: 'Ver mais'
     },
     {   nomeDiciplina: 'IHC',
         horario: 'Quarta-feira',
         horas: '08:40 - 10:20 AM',
         nota: 'Notas',
-        pontoDistribuido: 'Pontos distribuidos: 60',
-        pontuacaoAtual: 'Pontuacao atual: 45',
+        pontoDistribuido: 'Pontos distribuidos: 100',
+        pontuacaoAtual: '99',
         seeMoreFrequency: '/frequencia',
         seeMoreNotas: '/atividades',
         seeMoreAboutDegree: '/disciplina',
         frequencia: 'Frequencia',
         iconFrequencia: '',
-        frequenciaRegistrada: 'Frequencia registrada: 12/30',
-        frequenciaAtual: 'Frequencia atual: 2/30',
+        frequenciaRegistrada: 'Frequencia registrada: 26/30',
+        frequenciaAtual: '24/30',
         seeMore: 'Ver mais'
     },
-    {   nomeDiciplina: 'IHC',
-        horario: 'Quarta-feira',
-        horas: '08:40 - 10:20 AM',
+    {   nomeDiciplina: 'Psicologia Aplicada às Organizações',
+        horario: 'Sexta-feira',
+        horas: '07:00 - 08:40 AM',
         nota: 'Notas',
-        pontoDistribuido: 'Pontos distribuidos: 60',
-        pontuacaoAtual: 'Pontuacao atual: 45',
+        pontoDistribuido: '100',
+        pontuacaoAtual: '55',
         seeMoreFrequency: '/frequencia',
         seeMoreNotas: '/atividades',
         seeMoreAboutDegree: '/disciplina',
         frequencia: 'Frequencia',
         iconFrequencia: '',
-        frequenciaRegistrada: 'Frequencia registrada: 12/30',
-        frequenciaAtual: 'Frequencia atual: 2/30',
+        frequenciaRegistrada: 'Frequencia registrada: 30/30',
+        frequenciaAtual: '2/30',
         seeMore: 'Ver mais'
     },
 ];
 
 
 const About = () => {
+    const calculateFrequency = (frequency) => {
+        const calculte = frequency.split("/");
+        console.log(calculte);
+        const percentage = (calculte[0] / calculte[1]) * 100;
+        if(percentage >= 75) return "#00b327";
+        return '#F00';
+    };
+
+    const calculateNotas = (nota1, nota2) => {
+        const nota2Split = nota2.split(": ")[1];
+        const percentage = (nota1 / nota2Split) * 100;
+        console.log(nota2Split);
+        if(percentage >= 60) return "#00b327";
+        return '#F00';
+    };
+
     return (
         <Sidebar>
             <Navbar />
@@ -90,7 +106,10 @@ const About = () => {
                                 <img style={{ marginLeft: '2%'}} src={Draw} alt='calendar' />
                                 <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '2%'}}>{disciplina.pontoDistribuido}</span>
                             </div>
-                            <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '9%'}}>{disciplina.pontuacaoAtual}</span>
+                            <div style={{ display: 'flex', textAlign: 'center', alignItems: 'center'}}>
+                                <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '9%'}}>Pontuacao atual: </span>
+                                <span style={{ color: `${calculateNotas(disciplina.pontuacaoAtual, disciplina.pontoDistribuido)}`, fontSize: '14px', marginLeft: '1%'}}>{disciplina.pontuacaoAtual}</span>
+                            </div>
                             <a href={disciplina.seeMoreNotas} style={{ textAlign: 'end'}} >
                                 <Button>{disciplina.seeMore}</Button>
                             </a>
@@ -103,7 +122,10 @@ const About = () => {
                                 <img style={{ marginLeft: '2%'}} src={Frequency} alt='calendar' />
                                 <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '2%'}}>{disciplina.frequenciaRegistrada}</span>
                             </div>
-                            <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '9%'}}>{disciplina.frequenciaAtual}</span>
+                            <div style={{ display: 'flex', textAlign: 'center', alignItems: 'center'}}>
+                                <span style={{ color: '#A098AE', fontSize: '14px', marginLeft: '9%'}}>Frequencia atual: </span>
+                                <span style={{ color: `${calculateFrequency(disciplina.frequenciaAtual)}`, fontSize: '14px', marginLeft: '1%'}}>{disciplina.frequenciaAtual}</span>
+                            </div>
                             <a href={disciplina.seeMoreFrequency} style={{ textAlign: 'end', borderRadius: '0px 0px 11px'}} >
                                 <Button>{disciplina.seeMore}</Button>
                             </a>
