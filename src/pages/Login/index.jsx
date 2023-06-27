@@ -27,7 +27,7 @@ export const Login = () => {
     return (
         <div style={{ backgroundColor: "#F3F3F3" }}>
             <StyledLoginContainer>
-                <img style={{ marginLeft: '118px' }} src={Logo} alt="logo-marca" />
+                <img style={{ marginLeft: '104px' }} src={Logo} alt="logo-marca" />
                 <Line /> 
                 <Field title="Usuario:" setUser={setUser} user={user}/>
                 <Field title="Senha:" type="password" setUser={setUser} user={user}/>
